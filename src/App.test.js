@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import BookingForm from '../src/components/BookingForm'
-import { initializeTimes, timesReducer } from './components/Main';
+import BookingForm from './components/Main/Booking/BookingForm';
+import { initializeTimes, timesReducer } from './components/Main/Booking/BookingPage';
 
 /*test('renders learn react link', () => {
   render(<App />);
