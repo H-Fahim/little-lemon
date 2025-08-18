@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 // Fix inconsistent import paths
 import Homepage from "./Homepage";
-import About from "./Main/AboutPages/AboutUs";  // Updated to match actual file name
+import About from "./Main/About/AboutUs";  // Updated to match actual file name
 import Booking from "./Main/Booking/BookingPage";
-import Order from "./Main/OrderPages/Order";
-import Login from "./Main/LoginPages/Login";
-import Confirmation from "./Main/ReservePages/Confirmation";
+import Order from "./Main/Order/Order";
+import Login from "./Main/Login/Login";
+import Confirmation from "./Main/Reserve/Confirmation";
 import NotFound from "./Main/NotFound";  // Add 404 page
 
 export default function Routing() {

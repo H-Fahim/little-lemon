@@ -1,6 +1,6 @@
 
-import Heading from '../ReservePages/Heading';
-import ReservationForm from "../ReservePages/BookingForm";
+import Heading from '../Reserve/Heading';
+import ReservationForm from "../Reserve/BookingForm";
 import { useReducer } from "react";
 import { fetchAPI } from "../../../bookinsApi";
 export default function BookingPage() {
