@@ -6,11 +6,12 @@ function BookingForm({ availableTimes, updateTimes }) {
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('Birthday');
  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log({ date, time, guests, occasion });
-  };
+  
+  const handleSumbit = (e) => {
+   e.preventDefault();
+   props.submitForm(e);
+   };
+
   const handleDateChange = (e) => {
     const newDate = e.target.value;
     setDate(newDate);
