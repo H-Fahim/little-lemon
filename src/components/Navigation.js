@@ -1,42 +1,50 @@
 import { Link } from "react-router-dom";
+import NavLogo from "../assets/nav-logo.png";
 
-export default function Navigation(props) {
+const navigationLinks = [
+  { to: "/", text: "Home" },
+  { to: "/about", text: "About" },
+  { to: "/reservations", text: "Reservations" },
+  { to: "/order", text: "Order" },
+  { to: "/login", text: "Login" }
+];
+
+export default function Navigation({ device, className, id }) {
   return (
-    <menu className={`navbar-menu ${props.device}`}>
-      {props.device === "mobile" ? (
-        ""
-      ) : (
-        <Link to="/">
+    <nav 
+      className={`navigation ${className} ${device}`}
+      id={id}
+      aria-label={`${device} navigation`}
+    >
+      {device === "desktop" && (
+        <Link to="/" className="nav-logo-link">
           <img
-            src={require("../assets/nav-logo.png")}
+            src={NavLogo}
             alt="Little Lemon logo"
             className="nav-image"
-          ></img>
+          />
         </Link>
       )}
-      <Link className="hover-effect" to="/">
-        <h1>Home</h1>
-      </Link>
-      <Link className="hover-effect" to="/about">
-        <h1>About</h1>
-      </Link>
-      <a
-        className="hover-effect"
-        href={require("../assets/menu.webp")}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <h1>Menu</h1>
-      </a>
-      <Link className="hover-effect" to="/reservations">
-        <h1>Reservations</h1>
-      </Link>
-      <Link className="hover-effect" to="/order">
-        <h1>Order</h1>
-      </Link>
-      <Link className="hover-effect" to="/login">
-        <h1>Login</h1>
-      </Link>
-    </menu>
+      
+      <ul className="nav-links">
+        {navigationLinks.map(({ to, text }) => (
+          <li key={text}>
+            <Link to={to} className="nav-link hover-effect">
+              {text}
+            </Link>
+          </li>
+        ))}
+        <li>
+          <a
+            href="/menu.webp"
+            target="_blank"
+            rel="noreferrer"
+            className="nav-link hover-effect"
+          >
+            Menu
+          </a>
+        </li>
+      </ul>
+    </nav>
   );
 }
