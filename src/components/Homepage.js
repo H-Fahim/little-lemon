@@ -1,11 +1,11 @@
-import Heading from "./Main/Hero/Hero";
-import Specials from "./Main/Header/Specials";
-import Testimonials from './Main/Card/TestimonialCards'
-import About from "./Main/About/AboutUs";
+import Hero from "./Hero";
+import Specials from "./Specials";
+import Testimonials from './Testimonials'
+import About from "./About";
 export default function Homepage() {
   return (
     <>
-      <Heading />
+      <Hero />
       <main>
         <Specials />
         <Testimonials />

@@ -28,7 +28,7 @@ select {
 }
 
 body {
-  margin: 0; /* removes white border around website*/
+  margin: 0; 
   padding: 0;
   margin-top: -22px;
   
@@ -146,8 +146,8 @@ Link:link {
 
 .hero-image {
   max-height: 30rem;
-  max-width: 30rem;
-  padding: 1rem;
+  max-width: 25rem;
+  overflow: hidden;
   padding-left: 4rem;
 
 }
@@ -431,8 +431,8 @@ footer > menu {
 }
 
 .header-reserve {
-  width: 100vw; /* width of container */
-  height: 20rem; /* height of container */
+  width: 100vw; 
+  height: 20rem; 
   object-fit: cover;
 }
 
@@ -445,6 +445,28 @@ footer > menu {
   transform: translate(-50%, -50%);
   font-size: 25px;
   border-radius: 0.5rem;
+}
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container > input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: rgb(23, 23, 23);
+  font-size: 1.2rem;
+  margin: 0 0.5rem 0 0.5rem;
+}
+.input-container> label{
+  font-size: 1.2rem;
+  margin: 0 0.5rem 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: l;
+  align-items: center;
 }
 
 .reservation-form {
@@ -465,7 +487,7 @@ footer > menu {
 }
 
 .confirmation-image {
-  height: 70vh; /* height of container */
+  height: 70vh; 
   width: 100%;
   object-fit: cover;
 }
