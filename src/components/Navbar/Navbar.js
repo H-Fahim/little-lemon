@@ -1,8 +1,9 @@
 
 import { useState } from "react";
 import Navigation from "./Navigation";
-import Hamburger from "../assets/hamburger.png";
-import Close from "../assets/close.png";
+import Hamburger from "../../assets/hamburger.png";
+import Close from "../../assets/close.png";
+import navlogo from '../../assets/nav-logo.png'
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   function handleToggle() {
@@ -13,7 +14,7 @@ export default function Navbar() {
     <nav>
       <nav className="burger">
         <img
-          src={require("../assets/nav-logo.png")}
+          src={navlogo}
           alt="Little Lemon logo"
           className="nav-image"
         ></img>

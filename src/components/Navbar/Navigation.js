@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import navlogo from '../../assets/nav-logo.png'
+import menuwebp from '../../assets/menu.webp'
 
 export default function Navigation(props) {
   return (
@@ -8,7 +10,7 @@ export default function Navigation(props) {
       ) : (
         <Link to="/">
           <img
-            src={require("../assets/nav-logo.png")}
+            src={navlogo}
             alt="Little Lemon logo"
             className="nav-image"
           ></img>
@@ -22,7 +24,7 @@ export default function Navigation(props) {
       </Link>
       <a
         className="hover-effect"
-        href={require("../assets/menu.webp")}
+        href={menuwebp}
         target="_blank"
         rel="noreferrer"
       >

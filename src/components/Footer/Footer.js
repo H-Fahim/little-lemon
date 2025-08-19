@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
+import menuImg from "../../assets/menu.webp";
+
+import footerlogo from "../../assets/nav-logo.png";
 export default function Footer() {
   return (
     <footer>
       <menu>
         <li className="img-footer">
           <img
-            src={require("../assets/footer-logo.png")}
+            src={footerlogo}
             alt="Little Lemon logo"
           ></img>
         </li>
@@ -15,7 +18,7 @@ export default function Footer() {
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <a
-              href={require("../assets/menu.webp")}
+              href={menuImg}
               target="_blank"
               rel="noreferrer"
             >

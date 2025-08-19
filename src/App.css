@@ -2,6 +2,7 @@
   font-family: "Markazi Text", "Karla", serif;
 }
 
+
 label,
 input,
 select,
@@ -30,6 +31,7 @@ body {
   margin: 0; /* removes white border around website*/
   padding: 0;
   margin-top: -22px;
+  
 }
 
 menu {
@@ -79,6 +81,8 @@ Link:link {
 .navbar-menu {
   grid-template-columns: repeat(7, 1fr);
   align-items: center;
+  padding-bottom:0.5rem;
+  font-size: smaller;
 }
 
 .navbar-menu > li,
@@ -87,15 +91,19 @@ Link:link {
   text-align: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .mobile {
   display: none;
+  
+
 }
 
 .burger {
   display: none;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 4fr 1fr;
 }
 
 .hover-effect:hover {
@@ -117,58 +125,123 @@ Link:link {
   grid-template-columns: 1fr 1fr;
   padding: 1.25rem 5rem 1.2rem 5rem;
   margin-top: -1.4rem;
+  margin-bottom: -1.4rem;
+  animation-duration: 0.33s;
+  animation-timing-function: ease-in-out;
+  animation-name: slideDownFade;
+
 }
 
 .hero-text > h1 {
   font-size: 3rem;
-  margin-top: 0rem;
-  margin-bottom: -3rem;
+  margin-top: 3rem;
+  margin-bottom: -2rem;
+  
 }
 
 .hero-text > h2 {
   font-size: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .hero-image {
-  max-height: 17rem;
-  padding-left: 2rem;
+  max-height: 30rem;
+  max-width: 30rem;
+  padding: 1rem;
+  padding-left: 4rem;
+
 }
 
 .hero-image > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
+  border-radius: 8%;
+
+}
+.hero-image > img:hover {
+  transition: 0.5s;
+  transform: scale(1.05);
 }
 
 /* SPECIALS */
 .specials {
-  padding: 2rem 5rem 0 5rem;
-  animation-duration: 0.33s;
-  animation-timing-function: ease-in-out;
-  animation-name: slideDownFade;
-}
-
-.specials-topbar {
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.specials-topbar > h1 {
-  font-size: 2.5rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .specials-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2vw;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-card {
+  background-color: #edefee;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1024px) {
+  .specials-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .specials-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.specials {
+  padding: 5rem  ;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  animation-duration: 0.33s;
+  animation-timing-function: ease-in-out;
+  animation-name: slideDownFade;
+
+}
+
+.specials-topbar {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items:center;
+  
+}
+
+.specials-topbar > h1 {
+  font-size: 2rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding-right: 12rem;
+  
+}
+
+.specials-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .menu-card {
   background-color: #edefee;
   padding-bottom: 1rem;
+  width: 100%;
+  min-width: 280px;
+  height: auto;
 }
+
 
 .menu-card > img {
   height: 25vh;
@@ -337,12 +410,13 @@ footer > menu {
 }
 
 .img-footer > img {
-  max-height: 8rem;
+  max-height: 4rem;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  margin-right: 3rem;
+  margin-right: 4rem;
+  
 
   background-color: white;
   padding: 0.5rem;
