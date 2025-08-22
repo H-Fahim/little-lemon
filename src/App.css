@@ -715,3 +715,7 @@ footer > menu {
 .carousel > .thumbs-wrapper {
   display: none;
 }
+
+.reservation-form {
+  animation: slideDownFade 1s ease-in-out;
+}
