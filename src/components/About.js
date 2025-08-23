@@ -1,5 +1,7 @@
 import about1 from '../assets/food/food3.jpg';
 import about2 from '../assets/food/food1.jpg';
+
+
 export default function About() {
     return (
         <article className="about-us">
@@ -19,3 +21,5 @@ export default function About() {
     </article>
     );
 }
+
+
